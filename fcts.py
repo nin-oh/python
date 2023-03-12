@@ -1,6 +1,10 @@
-def milli(liste,n):
-    for i in range(len(liste)):
-        liste[i]=liste[i]*n;
-li=[1,2,3]
-milli(li,2)
-print(li)
+def lon(*lis):
+    min=max=lis[0]
+    for value in lis:
+        if len(value)<len(min):
+          min=value
+        elif len(value)>len(max):
+          max=value
+    return max,min;
+max,min =lon([0],[1,2],[5,6,8])
+print(f"la liste le plus longue: ({len(max)},{max})")"""
