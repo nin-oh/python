@@ -1,10 +1,15 @@
-def lon(*lis):
-    min=max=lis[0]
-    for value in lis:
-        if len(value)<len(min):
-          min=value
-        elif len(value)>len(max):
-          max=value
-    return max,min;
-max,min =lon([0],[1,2],[5,6,8])
-print(f"la liste le plus longue: ({len(max)},{max})")"""
+def srta(mot):
+    t=[]
+    m=""
+    j=0
+    for i in range(len(mot)):
+          
+          if mot[i] =="-" or i==len(mot)-1:
+            m=mot[j:i]
+            t.append(m)
+            j=i+1
+    t=sorted(t)
+    
+    return '-'.join(t);
+
+print(srta("plipu-jfkghi-fgdfg"))
